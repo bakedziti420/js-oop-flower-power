@@ -66,6 +66,8 @@ var cohort = {
  	- How many of the properties are Arrays?
  	- If there is an array, what data type(s) are the elements inside?
 
+<!-- CFU: Think-Pair-Share -->
+
 The `cohort` object is a grouping of key & value pairs (known as properties) that describe our class.  
   
 ```javascript 
