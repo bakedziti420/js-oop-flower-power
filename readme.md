@@ -1,9 +1,14 @@
 <!--
-Creator: <Name>
+Creator: Ilias Tsangaris
 Market: SF
+Adapted By: Zeb Girouard
+Market: DEN
 -->
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+<!-- Hook - Think about a game of soccer.  Let's think about all the pieces that make up that game, what are they?  What are some of their properties, things that describe them?  How about their methods, what do they do?  Pause for 1 minute, then cold-call and write this in JSON on white board as students fill in details.  
+-->
 
 #Flower Power: Object Oriented Programming in JavaScript
 
@@ -325,6 +330,8 @@ Let's source the best new properties that were created on their constructors and
 ##Cross-Pollination
 
 Now that we are awesome Flower experts, lets try our hand at cross pollinating two flower objects. Cross pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself. Another examples of this would be `create`, `new`, or `destroy`. These are all *meta* actions of a flower; a flower cannot create itself! They are called **static methods**.
+
+<!-- CFU (as class), how might we declare this method?  Think-pair-share -->
 
 To exemplify this let's create a static method (also sometimes refered to as a class method) called `crossPollinate` as opposed to the instance methods we've been making (i.e. `bloom`)
 - The method will take two flower instances as arguments.    
