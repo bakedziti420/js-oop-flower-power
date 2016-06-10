@@ -17,15 +17,15 @@ Object oriented programming is a common pattern throughout many languages. It's 
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-- Build practical and useful objects using Javascript constructors
-- Demonstrate a working knowledge of  object properties and methods
-- Convert previous projects to utilize Object Oriented Programming techniques
+- **Build** practical and useful objects using Javascript constructors
+- **Demonstrate** a working knowledge of  object properties and methods
+- **Convert** previous projects to utilize Object Oriented Programming techniques
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-- Comfortably implement JavaScript objects & functions
+- Comfortably **implement** JavaScript objects & functions
 
 ## Review: What is an Object?
 
@@ -80,6 +80,10 @@ To access a property, we can use dot-notation or bracket-notation on the key to 
  ```javascript
  var GA = cohort.school; //General Assembly
  ```
+
+ ```javascript
+ var GA = cohort["school"]; //General Assembly
+ ```
  
 Now the variable `GA` is assigned to the string `General Assembly`.  
 
@@ -92,6 +96,8 @@ The `cohort.students` array is now accessible by using `students` instead.
 Declaring variables and defining them as portions of a larger object helps us create readable and maintainable code.  
 
 *We can assume that an Object is a collection of properties (key & value pairs) that all have some sort of relationship, connected logically to one another.*  
+
+<!--CFU: Fist-to-five on Object properties, methods -->
 
 #Quick Challenge
 
@@ -204,7 +210,7 @@ function Flower() {
 
 We now have a method inside our flower object called `bloom`.
 
-There's an issue with the above code. If we create multiple flowers we don't if the attributes `color`, `petal`, and `smells` all have different properties. It makes sense for these properties to be different and customizable for each flower. However, all flowers could share the `bloom` method. What we want to avoid is creating an entirely new `bloom` method every time we make a new flower.
+There's an issue with the above code. If we create multiple flowers we don't care if the attributes `color`, `petal`, and `smells` all have different properties. It makes sense for these properties to be different and customizable for each flower. However, all flowers could share the `bloom` method. What we want to avoid is creating an entirely new `bloom` method every time we make a new flower.
 
 ```javascript
 var lily = new Flower();
@@ -374,12 +380,12 @@ var rily = Flower.crossPollinate(rose, lily)
 
 </details>
 
-*Thought experiment: Maybe we create a different intermediary object, called Bee, which would facilitate cross-pollination and return a new flower? Flowers don't just bash their heads together and make new flowers in the real world, they need bees!  What are some methods we could assign to a Bee object?*
+**Thought experiment:** *Maybe we create a different intermediary object, called Bee, which would facilitate cross-pollination and return a new flower? Flowers don't just bash their heads together and make new flowers in the real world, they need bees!  What are some methods we could assign to a Bee object?*
 
 
 ##Closing Thoughts
 
-* Why is using a prototype?
+* Why is using a prototype useful?
 * Would you typically put the methods or attributes in the prototype?
 * When would we use static methods?
 
