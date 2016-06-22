@@ -47,19 +47,14 @@ var cohort = {
 	classroom: "8",
 	students: [{
 		id: 0,
-		lastName: "Conda",
-		firstName: "Kabah",
-		githubUsername: "kabah"
+		lastName: "Girouard",
+		firstName: "Zeb",
+		githubUsername: "zebgirouard"
 	}, {
 		id: 1,
-		lastName: "Mike",
-		firstName: "Cheng",
-		githubUsername: "mcheng09"
-	}, {
-		id: 2,
-		lastName: "Min",
-		firstName: "Kim",
-		githubUsername: "petenut"
+		lastName: "Barela",
+		firstName: "John",
+		githubUsername: "jpbarela"
 	}]
 }
 
@@ -162,6 +157,8 @@ Let us break down a couple concepts introduced with this new line of code:
 
 <img src = http://www.mzephotos.com/wallpapers/roses/red-rose-1024x768.jpg width = 75%>
 
+<!--CFU Fist-to-five on the two ways to create an object -->
+
 Accessing the properties of our new `tulip` object is the same as accessing our properties from any other object: we can use either dot or bracket notation.
 
 ```javascript
@@ -227,6 +224,10 @@ lily.bloom === rose.bloom // false
 But we want their bloom methods to be the same!
 
 ##Prototypes
+
+<!-- Do Object.getPrototypeOf(lily), same with "rose", then wrap that in Object.getPrototypeOf() 
+Fist-to-five on this
+-->
 
 By adding the method `bloom` to the constructor's **prototype** we can enable all flowers to share a `bloom` method, or any other method for that matter! The prototype is simply the object that can be referenced by all the flower instances.
 
@@ -318,8 +319,14 @@ function Flower(color, petals, smells) {
 
 ##Modeling Flowers
 
-Take 10 minutes to create a flower instance based on the flower on your table. Decide amongst your
+<!--CFU Make an object that describes the flower you have in front of you using Object.create(); -->
+
+Take 10 minutes to create a flower instance based on the flower on your table, using Object.create(). Decide amongst your
 tablemates the type of flower, the flower's main color, number of petals, and whether or not it smells pretty. Think up some other possible properties or methods and add them too!
+
+<!--CFU make an object that describes your neighbor's flower with a Constructor function -->
+
+Take another 5 minutes to create a flower instance based on your neighbor's flower, using a Constructor function.
 
 ...
 
@@ -329,7 +336,7 @@ Let's source the best new properties that were created on their constructors and
 
 ##Cross-Pollination
 
-Now that we are awesome Flower experts, lets try our hand at cross pollinating two flower objects. Cross pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself. Another examples of this would be `create`, `new`, or `destroy`. These are all *meta* actions of a flower; a flower cannot create itself! They are called **static methods**.
+Now that we are awesome Flower experts, let's try our hand at cross pollinating two flower objects. Cross pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself. Another examples of this would be `create`, `new`, or `destroy`. These are all *meta* actions of a flower; a flower cannot create itself! They are called **static methods**.
 
 <!-- CFU (as class), how might we declare this method?  Think-pair-share -->
 
