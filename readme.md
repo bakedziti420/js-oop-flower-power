@@ -33,7 +33,7 @@ Object oriented programming is a common pattern throughout many languages. Its p
 - Comfortably **implement** JavaScript objects & functions
 
 ## Review: What is an Object?
-
+<!--9:05 -->
 As of today, we have been writing our Javascript code using mainly functions, Strings, numbers, and Arrays.   This has allowed us to parse through data objects given to us, reach out and pull data from the internet, and display it all on a web page!  These are all great accomplishments, but like everything else in the world of programming, there is always a more efficient way of implementing what we have done.
 
 Here's a truncated version of the cohort data we have been using.  Take some time to study the structure and the data types within the data object.
@@ -100,7 +100,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 <!--CFU: Fist-to-five on Object properties, methods -->
 
 #Quick Challenge
-
+<!-- 9:15 -->
 - Add some more properties that would fit into an object describing our cohort (address, floor number, instructors, etc).
 - Try to access your new properties from the console to make sure they work.
 
@@ -108,7 +108,11 @@ If everything worked out, you should have a fully functioning `cohort` object, o
 
 
 ##Constructors
+<!-- 9:20 -->
 For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `cohort`.  This is known as a *Literal* object definition.  
+
+###Literal Method and Object.create()
+
 Here's a flower using the *Literal* method:
 
 ```javascript
@@ -130,6 +134,12 @@ rose.petals = 16;
 ```
 
 The `rose` will share all characteristics of the original `flower`, except it will have 16 petals because we overwrote that property.
+
+###Independent Practice
+
+Now imagine a specific flower.  Take a few minutes to think of three properties.  Try to use multiple senses to describe it.  Define it as "flower".  Then, use `Object.create()` to make a new type of flower with a couple different properties.  Print your new flower to the console to see what it looks like.
+
+### Constructor Syntax
 
 Now let's explore a flower using the preferred *constructor* syntax:
  
@@ -157,7 +167,15 @@ Let us break down a couple concepts introduced with this new line of code:
 
 <img src = http://www.mzephotos.com/wallpapers/roses/red-rose-1024x768.jpg width = 75%>
 
+### Independent Practice
+
+Now, take a few minutes to rewrite your code from before to use the *constructor* syntax.
+
 <!--CFU Fist-to-five on the two ways to create an object -->
+
+<!-- 9:35 -->
+
+###Taking It Further
 
 Accessing the properties of our new `tulip` object is the same as accessing our properties from any other object: we can use either dot or bracket notation.
 
@@ -194,6 +212,7 @@ That's more like it!  To change the value of the lily object properties. We simp
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
 ##Object Methods
+<!-- 9:45 -->
 One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love `Array` methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them with `new` like we did above with the flowers.  Thanks, Javascript!
 
 Lets make a simple method in the flower object that outputs to the console whenever we call it.
@@ -229,6 +248,8 @@ But we want their bloom methods to be the same!
 Fist-to-five on this
 -->
 
+<!-- 9:55 -->
+
 By adding the method `bloom` to the constructor's **prototype** we can enable all flowers to share a `bloom` method, or any other method for that matter! The prototype is simply the object that can be referenced by all the flower instances.
 
 ```javascript
@@ -255,14 +276,16 @@ lily.bloom === rose.bloom // true
 ```
 
 ###Benefits
-
+<!-- 10:05 -->
 - Less wasted memory
 - Single source of truth
 
 >What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
 
-###More methods
+<!-- Pass out flowers -->
 
+###More methods
+<!-- 10:30 -->
 Let's add some more methods to the flower constructor.
 
 ```javascript
@@ -292,11 +315,12 @@ Flower.prototype = {
 Methods can also access properties within the object with the `this` identifier rather than using dot or bracket notation.
 
 ###Quick Challenge - Wilt & water
+<!-- 10:35 -->
 - Create a wilt() method that decrements each flower by one petal. :(
 - Create a water() method that increments each flower by one petal. :)
 
 ##Customization
-
+<!-- 10:45 -->
 Wouldn't it be nice if at the moment we instantiate a flower we could also define its properties?
 
 ```javascript
@@ -318,7 +342,7 @@ function Flower(color, petals, smells) {
 </details>
 
 ##Modeling Flowers
-
+<!-- 10:55 -->
 <!--CFU Make an object that describes the flower you have in front of you using Object.create(); -->
 
 Take 10 minutes to create a flower instance based on the flower on your table, using Object.create(). Decide amongst your
@@ -330,17 +354,23 @@ Take another 5 minutes to create a flower instance based on your neighbor's flow
 
 ...
 
+<!-- 11:10 -->
+
 Now we should have a flower instance for each of our actual flowers.
 
 Let's source the best new properties that were created on their constructors and integrate them into a universal flower constructor.
 
+<!--CFU Think-pair-share, think of three good ones, and say one so you have a backup -->
+
 ##Cross-Pollination
+
+<!-- 11:15 -->
 
 Now that we are awesome Flower experts, let's try our hand at cross pollinating two flower objects. Cross pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself. Another examples of this would be `create`, `new`, or `destroy`. These are all *meta* actions of a flower; a flower cannot create itself! They are called **static methods**.
 
 <!-- CFU (as class), how might we declare this method?  Think-pair-share -->
 
-To exemplify this let's create a static method (also sometimes refered to as a class method) called `crossPollinate` as opposed to the instance methods we've been making (i.e. `bloom`)
+To exemplify this let's create a static method (also sometimes refered to as a class method) called `crossPollinate` as opposed to the instance methods we've been making (e.g. `bloom`)
 - The method will take two flower instances as arguments.    
 - Return a new flower intance that is a mix of both "parent" colors. (i.e. red, yellow = "red-yellow"; we don't care about the color wheel).
 - Make the new petal count an average between the two parents' petal counts.
@@ -389,20 +419,28 @@ Flower.prototype = {
 var lily = new Flower("blue", 32, true);
 var rose = new Flower("green", 12, true);
 
-var rily = Flower.crossPollinate(rose, lily)
+var rily = Flower.crossPollinate(rose, lily);
+
+rily.smellsGood();
 ```
 
 </details>
+
+<!--11:30 -->
 
 **Thought experiment:** *Maybe we create a different intermediary object, called Bee, which would facilitate cross-pollination and return a new flower? Flowers don't just bash their heads together and make new flowers in the real world, they need bees!  What are some methods we could assign to a Bee object?*
 
 
 ##Closing Thoughts
+<!-- 11:40 -->
+
+<!-- Closing: Almost everything in Javascript either is an object or inherits from an object.  As you walk around the outside world, start thinking "how could I put that think in JSON notation?".  What properties do people on the train have?  What about the train itself?  That's how most Javascript developers think, to one degree or another.  I want to create a game, or an app, how would I model all my objects? -->
 
 * Why is using a prototype useful?
 * Would you typically put the methods or attributes in the prototype?
 * When would we use static methods?
 
 Further Suggested Reading:
-
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+<!-- Open these so people know they're there -->
+- [MDN on OOP](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [MDN on Prototypal Inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
