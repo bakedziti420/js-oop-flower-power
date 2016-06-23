@@ -401,8 +401,8 @@ Flower.prototype = {
   bloom: function() {
     console.log("Look at me!");
   },
-  smellsGood: function(answer) {
-    if (answer) {
+  smellsGood: function() {
+    if (this.smells) {
       return 'This flower smells amazing!';
     } else {
       return 'What a noxious weed!';
