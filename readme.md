@@ -391,7 +391,7 @@ function Flower(color, petals, smells) {
 Flower.crossPollinate = function(momFlower, dadFlower) {
   var color = momFlower.color + "-" + dadFlower.color;
   var petals = (momFlower.petals + dadFlower.petals) / 2;
-  var smells = momFlower.smellsGood && dadFlower.smellsGood;
+  var smells = momFlower.smellsGood() && dadFlower.smellsGood();
   var babyFlower = new Flower(color, petals, smells);
   return babyFlower;
 }
