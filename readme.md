@@ -7,8 +7,12 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!-- 11:00 15 minutes -->
+
 <!-- Hook - Think about a game of soccer.  Let's think about all the pieces that make up that game, what are they?  What are some of their properties, things that describe them?  How about their methods, what do they do?  Pause for 1 minute, then cold-call and write this in JSON on white board as students fill in details.  
 -->
+
+<!--This whole class, you basically don't need to show this README, just type live into the Dev Tools Console -->
 
 #Flower Power: Object Oriented Programming in JavaScript
 
@@ -33,18 +37,18 @@ Object oriented programming is a common pattern throughout many languages. Its p
 - Comfortably **implement** JavaScript objects & functions
 
 ## Review: What is an Object?
-<!--9:05 -->
+
 As of today, we have been writing our Javascript code using mainly functions, Strings, numbers, and Arrays.   This has allowed us to parse through data objects given to us, reach out and pull data from the internet, and display it all on a web page!  These are all great accomplishments, but like everything else in the world of programming, there is always a more efficient way of implementing what we have done.
 
-Here's a truncated version of the cohort data we have been using.  Take some time to study the structure and the data types within the data object.
+Here's a truncated version of some cohort data.  Take some time to study the structure and the data types within the data object.
 
 ```javascript
 var cohort = {
 	school: "General Assembly",
-	city: "San Francisco",
+	city: "Denver",
 	course: "Web Development Immersive",
-	courseId: "WDI29",
-	classroom: "8",
+	courseId: "WDI2",
+	classroom: "Grays",
 	students: [{
 		id: 0,
 		lastName: "Girouard",
@@ -52,9 +56,9 @@ var cohort = {
 		githubUsername: "zebgirouard"
 	}, {
 		id: 1,
-		lastName: "Barela",
-		firstName: "John",
-		githubUsername: "jpbarela"
+		lastName: "Anderson",
+		firstName: "Nick",
+		githubUsername: "nickandersonr"
 	}]
 }
 
@@ -100,18 +104,18 @@ Declaring variables and defining them as portions of a larger object helps us cr
 <!--CFU: Fist-to-five on Object properties, methods -->
 
 #Quick Challenge
-<!-- 9:15 -->
+<!-- 11:15 -->
 - Add some more properties that would fit into an object describing our cohort (address, floor number, instructors, etc).
 - Try to access your new properties from the console to make sure they work.
 
 If everything worked out, you should have a fully functioning `cohort` object, only now with even MORE properties with us to play with!  
 
 
-##Constructors
-<!-- 9:20 -->
+## Creating Objects
+<!-- 11:20 15 minutes-->
 For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `cohort`.  This is known as a *Literal* object definition.  
 
-###Literal Method and Object.create()
+### Literal Method
 
 Here's a flower using the *Literal* method:
 
@@ -124,6 +128,8 @@ var flower = {
 };
 ```
 
+### Object.create()
+
 We *could* create another flower using `Object.create`. For example:
 
 ```javascript
@@ -135,7 +141,7 @@ rose.petals = 16;
 
 The `rose` will share all characteristics of the original `flower`, except it will have 16 petals because we overwrote that property.
 
-###Independent Practice
+### Independent Practice
 
 Now imagine a specific flower.  Take a few minutes to think of three properties.  Try to use multiple senses to describe it.  Define it as "flower".  Then, use `Object.create()` to make a new type of flower with a couple different properties.  Print your new flower to the console to see what it looks like.
 
@@ -169,13 +175,13 @@ Let us break down a couple concepts introduced with this new line of code:
 
 ### Independent Practice
 
-Now, take a few minutes to rewrite your code from before to use the *constructor* syntax.
+Now, take a few minutes to rewrite your code from before to use the *constructor* syntax instead.
 
-<!--CFU Fist-to-five on the two ways to create an object -->
+<!--CFU Fist-to-five on the three ways to create an object -->
 
-<!-- 9:35 -->
+<!-- 11:35 5 minutes-->
 
-###Taking It Further
+### Taking It Further
 
 Accessing the properties of our new `tulip` object is the same as accessing our properties from any other object: we can use either dot or bracket notation.
 
@@ -185,7 +191,7 @@ var petalCount = tulip.petals; // 32
 var smellsNice = tulip.smells; //true
 ```
 
-If we wanted to create yet ANOTHER flower, all we have to do is call our function just like we did above.  This time, lets make an object called `lily`.
+If we wanted to create yet ANOTHER flower, all we have to do is call our function just like we did above.  This time, let's make an object called `lily`.
 
 ```javascript
 var lily = new Flower();
@@ -212,10 +218,10 @@ That's more like it!  To change the value of the lily object properties. We simp
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
 ##Object Methods
-<!-- 9:45 -->
+<!-- 11:40 10 minutes -->
 One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love `Array` methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them with `new` like we did above with the flowers.  Thanks, Javascript!
 
-Lets make a simple method in the flower object that outputs to the console whenever we call it.
+Let's make a simple method in the flower object that outputs to the console whenever we call it.
 
 ```javascript
 function Flower() {
@@ -242,13 +248,11 @@ lily.bloom === rose.bloom // false
 
 But we want their bloom methods to be the same!
 
+<!-- CFU: Why is this?  (Similar to objectA and objectB not being equal even though they have same properties) -->
+
 ##Prototypes
 
-<!-- Do Object.getPrototypeOf(lily), same with "rose", then wrap that in Object.getPrototypeOf() 
-Fist-to-five on this
--->
-
-<!-- 9:55 -->
+<!-- 11:50 10 minutes -->
 
 By adding the method `bloom` to the constructor's **prototype** we can enable all flowers to share a `bloom` method, or any other method for that matter! The prototype is simply the object that can be referenced by all the flower instances.
 
@@ -275,17 +279,16 @@ var rose = new Flower();
 lily.bloom === rose.bloom // true
 ```
 
-###Benefits
-<!-- 10:05 -->
+### Benefits of Putting Methods in Prototypes
 - Less wasted memory
 - Single source of truth
 
->What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
+### Check for Yourself
 
-<!-- Pass out flowers -->
+What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
 
-###More methods
-<!-- 10:30 -->
+### More methods
+<!-- 12:00 5 minutes-->
 Let's add some more methods to the flower constructor.
 
 ```javascript
@@ -312,15 +315,16 @@ Flower.prototype = {
   }
 }
 ```
-Methods can also access properties within the object with the `this` identifier rather than using dot or bracket notation.
 
-###Quick Challenge - Wilt & water
-<!-- 10:35 -->
+> Note: Methods can also access properties within the object with the `this` identifier and dot or bracket notation.
+
+### Quick Challenge - Wilt & water
+<!-- 12:05 10 minutes-->
 - Create a wilt() method that decrements each flower by one petal. :(
 - Create a water() method that increments each flower by one petal. :)
 
-##Customization
-<!-- 10:45 -->
+## Customization
+<!-- 12:15 10 minutes-->
 Wouldn't it be nice if at the moment we instantiate a flower we could also define its properties?
 
 ```javascript
@@ -329,9 +333,13 @@ var chrysanthemum = new Flower("pink", 65, false);
 
 Such that the `chrysanthemum` is pink with 65 petals and doesn't smell good.
 
-<details>
-<summary>Challenge: how could we refactor the original flower constructor to accomplish this?</summary>
+#### Challenge
 
+How could we refactor the original flower constructor to accomplish this?
+
+> Hint: Remember a Constructor is a function, so how could we handle those values in the parentheses above?
+
+<!--
 ```javascript
 function Flower(color, petals, smells) {
     this.color = color;
@@ -339,42 +347,47 @@ function Flower(color, petals, smells) {
     this.smells = smells;
 }
 ```
-</details>
+-->
+
+<!--Part Two -->
+
+<!-- Pass out flowers -->
 
 ##Modeling Flowers
-<!-- 10:55 -->
-<!--CFU Make an object that describes the flower you have in front of you using Object.create(); -->
+<!-- 1:30 15 minutes-->
 
-Take 10 minutes to create a flower instance based on the flower on your table, using Object.create(). Decide amongst your
-tablemates the type of flower, the flower's main color, number of petals, and whether or not it smells pretty. Think up some other possible properties or methods and add them too!
+<!--Stress that they should NOT copy or paste, but you can put some code on the projector -->
 
-<!--CFU make an object that describes your neighbor's flower with a Constructor function -->
+Take a few minutes to create a flower instance based on the flower on your table, using Object.create(). Decide:
 
-Take another 5 minutes to create a flower instance based on your neighbor's flower, using a Constructor function.
+- The type of flower
+- The flower's main color
+- The number of petals
+- Whether or not it smells pretty.
+- At least one other property
+- At least one method (where should the method go?)
 
-...
+Remember to test early, and test often, to make sure your flower Object looks the way you want.
 
-<!-- 11:10 -->
+Now take another few minutes to create a flower instance based on your neighbor's flower, using a Constructor function.
 
-Now we should have a flower instance for each of our actual flowers.
+## Cross-Pollination
 
-Let's source the best new properties that were created on their constructors and integrate them into a universal flower constructor.
+<!-- 1:45 10 minutes-->
 
-<!--CFU Think-pair-share, think of three good ones, and say one so you have a backup -->
+Now that we are awesome Flower experts, let's try our hand at cross-pollinating two flower objects. Cross-pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself.
 
-##Cross-Pollination
+<!-- CFU (as class), how might we declare this method, knowing what we know now?  Think-pair-share (guessing they'd say put it in prototype)  There is only one problem with that...how does that method know about any other flowers?  In order to do that, we need to go *above* the flowers.-->
 
-<!-- 11:15 -->
+To accomplish cross-pollination, we will have to create a **static method**.
 
-Now that we are awesome Flower experts, let's try our hand at cross pollinating two flower objects. Cross pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself. Another examples of this would be `create`, `new`, or `destroy`. These are all *meta* actions of a flower; a flower cannot create itself! They are called **static methods**.
-
-<!-- CFU (as class), how might we declare this method?  Think-pair-share -->
-
-To exemplify this let's create a static method (also sometimes refered to as a class method) called `crossPollinate` as opposed to the instance methods we've been making (e.g. `bloom`)
-- The method will take two flower instances as arguments.    
-- Return a new flower intance that is a mix of both "parent" colors. (i.e. red, yellow = "red-yellow"; we don't care about the color wheel).
+The **static method** (also sometimes refered to as a **class method**) we will create is called `crossPollinate`. It is different from the instance methods we've been making (e.g. `bloom`), because it is based around the *general idea* of a flower, not a specific *instance* of a flower.  This method will:
+- Take two flower instances as arguments.    
+- Return a new flower instance that is a mix of both "parent" colors. (e.g. red, yellow = "red-yellow"; we don't care about the color wheel).
 - Make the new petal count an average between the two parents' petal counts.
 - The smellPretty gene is recessive, unfortunately. This means that a flower will smell pretty IF and only IF both flowers smell pretty.  
+
+<!--Walk through this with class -->
 
 <details>
 <summary>Example solution</summary>
@@ -426,18 +439,14 @@ rily.smellsGood();
 
 </details>
 
-<!--11:30 -->
-
-**Thought experiment:** *Maybe we create a different intermediary object, called Bee, which would facilitate cross-pollination and return a new flower? Flowers don't just bash their heads together and make new flowers in the real world, they need bees!  What are some methods we could assign to a Bee object?*
-
 
 ##Closing Thoughts
-<!-- 11:40 -->
+<!-- 1:55 5 minutes -->
 
-<!-- Closing: Almost everything in Javascript either is an object or inherits from an object.  As you walk around the outside world, start thinking "how could I put that think in JSON notation?".  What properties do people on the train have?  What about the train itself?  That's how most Javascript developers think, to one degree or another.  I want to create a game, or an app, how would I model all my objects? -->
+<!-- Closing: Almost everything in Javascript either is an object or inherits from an object.  As you walk around the outside world, start thinking "how could I put that thing in JSON notation?".  What properties do people on the train have?  What about the train itself?  That's how most Javascript developers think, to one degree or another.  I want to create a game, or an app, how would I model all my objects? -->
 
 * Why is using a prototype useful?
-* Would you typically put the methods or attributes in the prototype?
+* Would you typically put methods or properties in the prototype?
 * When would we use static methods?
 
 Further Suggested Reading:
