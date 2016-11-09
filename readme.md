@@ -14,7 +14,7 @@ Market: DEN
 
 <!--This whole class, you basically don't need to show this README, just type live into the Dev Tools Console -->
 
-#Flower Power: Object Oriented Programming in JavaScript
+# Flower Power: Object Oriented Programming in JavaScript
 
 ## Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
@@ -217,7 +217,7 @@ That's more like it!  To change the value of the lily object properties. We simp
 
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
-##Object Methods
+## Object Methods
 <!-- 11:40 10 minutes -->
 One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love `Array` methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them with `new` like we did above with the flowers.  Thanks, Javascript!
 
@@ -237,7 +237,7 @@ function Flower() {
 
 We now have a method inside our flower object called `bloom`.
 
-There's an issue with the above code. If we create multiple flowers we don't care if the attributes `color`, `petal`, and `smells` all have different properties. It makes sense for these properties to be different and customizable for each flower. However, all flowers could share the `bloom` method. What we want to avoid is creating an entirely new `bloom` method every time we make a new flower.
+There's an issue with the above code. If we create multiple flowers we don't care if the properties `color`, `petal`, and `smells` all have different values. It makes sense for these properties to be different and customizable for each flower. However, all flowers could share the `bloom` method. What we want to avoid is creating an entirely new `bloom` method every time we make a new flower.
 
 ```javascript
 var lily = new Flower();
@@ -250,7 +250,7 @@ But we want their bloom methods to be the same!
 
 <!-- CFU: Why is this?  (Similar to objectA and objectB not being equal even though they have same properties) -->
 
-##Prototypes
+## Prototypes
 
 <!-- 11:50 10 minutes -->
 
@@ -320,8 +320,8 @@ Flower.prototype = {
 
 ### Quick Challenge - Wilt & water
 <!-- 12:05 10 minutes-->
-- Create a wilt() method that decrements each flower by one petal. :(
-- Create a water() method that increments each flower by one petal. :)
+- Create a wilt() method in the prototype that decrements each flower by one petal. :(
+- Create a water() method in the prototype that increments each flower by one petal. :)
 
 ## Customization
 <!-- 12:15 10 minutes-->
@@ -353,7 +353,7 @@ function Flower(color, petals, smells) {
 
 <!-- Pass out flowers -->
 
-##Modeling Flowers
+## Modeling Flowers
 <!-- 1:30 15 minutes-->
 
 <!--Stress that they should NOT copy or paste, but you can put some code on the projector -->
