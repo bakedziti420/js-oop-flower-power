@@ -103,8 +103,8 @@ Declaring variables and defining them as portions of a larger object helps us cr
 
 <!--CFU: Fist-to-five on Object properties, methods -->
 
-#Quick Challenge
-<!-- 11:15 -->
+# Quick Challenge
+<!-- 11:15 5 minutes -->
 - Add some more properties that would fit into an object describing our cohort (address, floor number, instructors, etc).
 - Try to access your new properties from the console to make sure they work.
 
@@ -289,7 +289,7 @@ What if we edit the prototype *after* the flower instances have been created? Wi
 
 ### More methods
 <!-- 12:00 5 minutes-->
-Let's add some more methods to the flower constructor.
+Let's add some more methods to the flower prototype.
 
 ```javascript
 function Flower() {
