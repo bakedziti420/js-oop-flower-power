@@ -108,7 +108,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 - Add some more properties that would fit into an object describing our cohort (address, floor number, instructors, etc).
 - Try to access your new properties from the console to make sure they work.
 
-If everything worked out, you should have a fully functioning `cohort` object, only now with even MORE properties with us to play with!  
+If everything worked out, you should have a fully functioning `cohort` object, only now with even MORE properties for us to play with!  
 
 
 ## Creating Objects
