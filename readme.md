@@ -357,7 +357,7 @@ function Flower(color, petals, smells) {
 
 <!--Stress that they should NOT copy or paste, but you can put some code on the projector -->
 
-Take a few minutes to create a flower instance based on the flower on your table, using Object.create(). Decide:
+Take a few minutes to create a flower instance based on the flower on your table, using a constructor. Decide:
 
 - The type of flower
 - The flower's main color
