@@ -28,7 +28,6 @@ Object oriented programming is a common pattern throughout many languages. Its p
 
 - **Build** practical and useful objects using Javascript constructors
 - **Demonstrate** a working knowledge of  object properties and methods
-- **Convert** previous projects to utilize Object Oriented Programming techniques
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
