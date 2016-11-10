@@ -213,7 +213,7 @@ lily.color = 'yellow';
 lily.petals = 6;
 ```
 
-That's more like it!  To change the value of the lily object properties. We simply access them with dot or bracket notation.  We then follow with an equals and a new appropriate value.  Couldn't be easier!
+That's more like it!  To change the value of the lily object properties, we simply access them with dot or bracket notation.  We then follow with an equals and a new appropriate value.  Couldn't be easier!
 
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
