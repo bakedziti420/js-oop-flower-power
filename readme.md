@@ -7,7 +7,7 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!-- 9:40 15 minutes -->
+<!-- 9:30 15 minutes -->
 
 <!-- Hook - Think about a game of soccer.  Let's think about all the pieces that make up that game, what are they?  What are some of their properties, things that describe them?  How about their methods, what do they do?  Pause for 1 minute, then cold-call and write this in JSON on white board as students fill in details.  
 -->
@@ -103,7 +103,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 <!--CFU: Fist-to-five on Object properties, methods -->
 
 # Quick Challenge
-<!-- 9:55 5 minutes -->
+<!-- 9:45 5 minutes -->
 - Add some more properties that would fit into an object describing our cohort (address, floor number, instructors, etc).
 - Try to access your new properties from the console to make sure they work.
 
@@ -111,7 +111,7 @@ If everything worked out, you should have a fully functioning `cohort` object, o
 
 
 ## Creating Objects
-<!-- 10:00 10 minutes-->
+<!-- 9:50 10 minutes-->
 For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `cohort`.  This is known as a *Literal* object definition.  
 
 ### Literal Method
@@ -161,7 +161,7 @@ Now imagine a specific flower.  Take a few minutes to think of three properties.
 
 <!--CFU Fist-to-five on the two main ways to create an object -->
 
-<!-- 10:10 5 minutes-->
+<!-- 10:00 5 minutes-->
 
 ### Taking It Further
 
@@ -200,7 +200,7 @@ That's more like it!  To change the value of the lily object properties, we simp
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
 ## Object Methods
-<!-- 10:15 10 minutes -->
+<!-- 10:05 10 minutes -->
 One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love `Array` methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them with `new` like we did above with the flowers.  Thanks, Javascript!
 
 Let's make a simple method in the flower object that outputs to the console whenever we call it.
@@ -234,7 +234,7 @@ But we want their bloom methods to be the same!
 
 ## Prototypes
 
-<!-- 10:25 10 minutes -->
+<!-- 10:15 10 minutes -->
 
 By adding the method `bloom` to the constructor's **prototype** we can enable all flowers to share a `bloom` method, or any other method for that matter! The prototype is simply the object that can be referenced by all the flower instances.
 
@@ -270,7 +270,7 @@ lily.bloom === rose.bloom // true
 What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
 
 ### More methods
-<!-- 10:35 5 minutes-->
+<!-- 10:25 5 minutes-->
 Let's add some more methods to the flower prototype.
 
 ```javascript
@@ -301,12 +301,12 @@ Flower.prototype = {
 > Note: Methods can also access properties within the object with the `this` identifier and dot or bracket notation.
 
 ### Quick Challenge - Wilt & water
-<!-- 10:40 10 minutes-->
+<!-- 10:30 10 minutes-->
 - Create a wilt() method in the prototype that decrements each flower by one petal. :(
 - Create a water() method in the prototype that increments each flower by one petal. :)
 
 ## Customization
-<!-- 10:50 10 minutes-->
+<!-- 10:40 10 minutes-->
 Wouldn't it be nice if at the moment we instantiate a flower we could also define its properties?
 
 ```javascript
@@ -336,11 +336,11 @@ function Flower(color, petals, smells) {
 <!-- Pass out flowers -->
 
 ## Modeling Flowers
-<!-- 11:10 15 minutes-->
+<!-- 11:00 15 minutes-->
 
 <!--Stress that they should NOT copy or paste, but you can put some code on the projector -->
 
-Take a few minutes to create a flower instance based on the flower on your table, using a constructor. Decide:
+Take a few minutes to create a flower instance based on the flower on your table, using a constructor function. Decide:
 
 - The type of flower
 - The flower's main color
@@ -355,7 +355,8 @@ Now take another few minutes to create a flower instance based on your neighbor'
 
 ## Cross-Pollination
 
-<!-- 11:25 10 minutes-->
+<!--If we are tight on time, just drop this section entirely -->
+<!-- 11:15 10 minutes-->
 
 Now that we are awesome Flower experts, let's try our hand at cross-pollinating two flower objects. Cross-pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself.
 
@@ -423,7 +424,7 @@ rily.smellsGood();
 
 
 ## Closing Thoughts
-<!-- 11:35 5 minutes -->
+<!-- 11:25 5 minutes -->
 
 <!-- Closing: Almost everything in Javascript either is an object or inherits from an object.  As you walk around the outside world, start thinking "how could I put that thing in JSON notation?".  What properties do people on the train have?  What about the train itself?  That's how most Javascript developers think, to one degree or another.  I want to create a game, or an app, how would I model all my objects? -->
 
