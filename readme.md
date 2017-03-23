@@ -7,7 +7,7 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!--Actually 10:38  -->
+<!--Actually 10:40  -->
 <!-- 9:30 15 minutes -->
 
 <!-- Hook - Think about a game of soccer.  Let's think about all the pieces that make up that game, what are they?  What are some of their properties, things that describe them?  How about their methods, what do they do?  Pause for 1 minute, then cold-call and write this in JSON on white board as students fill in details.  
@@ -103,6 +103,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 
 <!--CFU: Fist-to-five on Object properties, methods -->
 
+<!--Actually 10:54 -->
 # Quick Challenge
 <!-- 9:45 5 minutes -->
 - Add some more properties that would fit into an object describing our cohort (address, floor number, instructors, etc).
@@ -110,7 +111,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 
 If everything worked out, you should have a fully functioning `cohort` object, only now with even MORE properties for us to play with!  
 
-
+<!-- Actually 11:00 -->
 ## Creating Objects
 <!-- 9:50 10 minutes-->
 For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `cohort`.  This is known as a *Literal* object definition.  
@@ -162,6 +163,7 @@ Now imagine a specific flower.  Take a few minutes to think of three properties.
 
 <!--CFU Fist-to-five on the two main ways to create an object -->
 
+<!--Actually 11:11 -->
 <!-- 10:00 5 minutes-->
 
 ### Taking It Further
@@ -200,6 +202,7 @@ That's more like it!  To change the value of the lily object properties, we simp
 
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
+<!--11:12 -->
 ## Object Methods
 <!-- 10:05 10 minutes -->
 One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love `Array` methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them with `new` like we did above with the flowers.  Thanks, Javascript!
@@ -270,6 +273,7 @@ lily.bloom === rose.bloom // true
 
 What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
 
+<!--11:27 -->
 ### More methods
 <!-- 10:25 5 minutes-->
 Let's add some more methods to the flower prototype.
@@ -301,11 +305,13 @@ Flower.prototype = {
 
 > Note: Methods can also access properties within the object with the `this` identifier and dot or bracket notation.
 
+<!--Actually 11:32 -->
 ### Quick Challenge - Wilt & water
 <!-- 10:30 10 minutes-->
 - Create a wilt() method in the prototype that decrements each flower by one petal. :(
 - Create a water() method in the prototype that increments each flower by one petal. :)
 
+<!--Actually 11:43 -->
 ## Customization
 <!-- 10:40 10 minutes-->
 Wouldn't it be nice if at the moment we instantiate a flower we could also define its properties?
@@ -337,6 +343,7 @@ function Flower(color, petals, smells) {
 <!-- Pass out flowers -->
 
 ## Modeling Flowers
+<!--Actually 11:57 -->
 <!-- 11:00 15 minutes-->
 
 <!--Stress that they should NOT copy or paste, but you can put some code on the projector -->
@@ -357,6 +364,7 @@ Now take another few minutes to create a flower instance based on your neighbor'
 ## Cross-Pollination
 
 <!--If we are tight on time, just drop this section entirely -->
+<!--Actually 12:13 -->
 <!-- 11:15 10 minutes-->
 
 Now that we are awesome Flower experts, let's try our hand at cross-pollinating two flower objects. Cross-pollinating is beyond the realm of an individual flower and could therefore live on the Flower constructor itself.
@@ -423,7 +431,7 @@ rily.smellsGood();
 
 </details>
 
-
+<!--Actually 12:25 -->
 ## Closing Thoughts
 <!-- 11:25 5 minutes -->
 
