@@ -7,6 +7,7 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--Actually 10:38  -->
 <!-- 9:30 15 minutes -->
 
 <!-- Hook - Think about a game of soccer.  Let's think about all the pieces that make up that game, what are they?  What are some of their properties, things that describe them?  How about their methods, what do they do?  Pause for 1 minute, then cold-call and write this in JSON on white board as students fill in details.  
@@ -46,7 +47,7 @@ var cohort = {
 	school: "General Assembly",
 	city: "Denver",
 	course: "Web Development Immersive",
-	courseId: "WDI2",
+	courseId: "WDI3",
 	classroom: "Grays",
 	students: [{
 		id: 0,
