@@ -7,6 +7,7 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI5 9:32 -->
 <!--Actually 10:40  -->
 <!--WDI4 9:40 -->
 <!-- 9:30 15 minutes -->
@@ -48,7 +49,7 @@ var cohort = {
 	school: "General Assembly",
 	city: "Denver",
 	course: "Web Development Immersive",
-	courseId: "WDI3",
+	courseId: "WDI5",
 	classroom: "Grays",
 	students: [{
 		id: 0,
@@ -369,7 +370,7 @@ Take a few minutes to create a flower instance based on the flower on your table
 
 Remember to test early, and test often, to make sure your flower Object looks the way you want.
 
-Now take another few minutes to create a flower instance based on your neighbor's flower, using a Constructor function.
+Now take another few minutes to create a flower instance based on your neighbor's flower, using a constructor function.
 
 ## Cross-Pollination
 
