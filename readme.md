@@ -173,6 +173,7 @@ Now imagine a specific flower.  Take a few minutes to think of three properties.
 
 <!--Actually 11:11 -->
 <!--WDI4 10:16 but basically did next section already -->
+<!--WDI5 10:03 -->
 <!-- 10:00 5 minutes-->
 
 ### Taking It Further
@@ -247,6 +248,7 @@ But we want their bloom methods to be the same!
 
 ## Prototypes
 
+<!--10:09 WDI5 -->
 <!-- 10:15 10 minutes -->
 
 By adding the method `bloom` to the constructor's **prototype** we can enable all flowers to share a `bloom` method, or any other method for that matter! The prototype is simply the object that can be referenced by all the flower instances.
@@ -282,6 +284,7 @@ lily.bloom === rose.bloom // true
 
 What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
 
+<!--WDI5 10:20 -->
 <!--11:27 -->
 <!--10:26 WDI4-->
 ### More methods
@@ -322,6 +325,7 @@ Flower.prototype = {
 - Create a wilt() method in the prototype that decrements each flower by one petal. :(
 - Create a water() method in the prototype that increments each flower by one petal. :)
 
+<!--WDI5 10:33 -->
 <!--Actually 11:43 -->
 <!--10:44 WDI4 -->
 ## Customization
@@ -350,6 +354,7 @@ function Flower(color, petals, smells) {
 ```
 -->
 
+<!--WDI5 10:41 -->
 <!--WDI4 11:01 when done (few questions)-->
 
 <!--Part Two -->
@@ -357,6 +362,7 @@ function Flower(color, petals, smells) {
 <!-- Pass out flowers during break-->
 
 ## Modeling Flowers
+<!--WDI5 10:55 -->
 <!--Actually 11:57 -->
 <!--11:11 WDI4 -->
 <!-- 11:00 15 minutes-->
