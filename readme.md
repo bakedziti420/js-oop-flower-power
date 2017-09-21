@@ -384,6 +384,7 @@ Now take another few minutes to create a flower instance based on your neighbor'
 
 ## Cross-Pollination
 
+<!--WDI5 11:09 -->
 <!--WDI4 11:26 -->
 <!--If we are tight on time, just drop this section entirely -->
 <!--Actually 12:13 -->
@@ -464,6 +465,7 @@ rily.smellsGood();
 * When would we use static methods?
 
 <!--WDI4 11:47 -->
+<!--WDI5 11:32 -->
 
 Further Suggested Reading:
 <!-- Open these so people know they're there -->
