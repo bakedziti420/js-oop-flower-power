@@ -74,6 +74,8 @@ var cohort = {
 
 <!-- CFU: Think-Pair-Share -->
 
+<!--WDI5 9:44 -->
+
 The `cohort` object is a grouping of key & value pairs (known as properties) that describe our class.  
   
 ```javascript 
@@ -105,6 +107,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 
 <!--CFU: Fist-to-five on Object properties, methods -->
 
+<!--WDI5 9:48 -->
 <!--WDI4 9:56 -->
 <!--Actually 10:54 -->
 # Quick Challenge
@@ -115,6 +118,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 If everything worked out, you should have a fully functioning `cohort` object, only now with even MORE properties for us to play with!  
 
 <!-- Actually 11:00 -->
+<!--WDI5 9:53 -->
 <!--10:05 WDI4 -->
 ## Creating Objects
 <!-- 9:50 10 minutes-->
@@ -126,7 +130,7 @@ Here's a flower using the *Literal* method:
 
 ```javascript
 // Literal Object Definition
-var flower = {
+let flower = {
 	color : "red",
 	petals : 32,
 	smells : true
@@ -151,7 +155,7 @@ The constructor method is actually a function that can create unique instances o
 
 ```javascript
 // the keyword `new` is necessary
-var tulip = new Flower();
+let tulip = new Flower();
 ```
 
 Let us break down a couple concepts introduced with this new line of code:
@@ -163,7 +167,7 @@ Let us break down a couple concepts introduced with this new line of code:
 
 ### Independent Practice
 
-Now imagine a specific flower.  Take a few minutes to think of three properties.  Try to use multiple senses to describe it.  Define it as "flower".  Then, use a *constructor* to make a new type of flower with a couple different properties.  Print your new flower to the console to see what it looks like.
+Now imagine a specific flower.  Take a few minutes to think of three properties.  Try to use multiple senses to describe it.  Then, use a *constructor* called `Flower` to make a new type of flower with a couple different properties.  Print your new flower to the console to see what it looks like.
 
 <!--CFU Fist-to-five on the two main ways to create an object -->
 
@@ -176,23 +180,23 @@ Now imagine a specific flower.  Take a few minutes to think of three properties.
 Accessing the properties of our new `tulip` object is the same as accessing our properties from any other object: we can use either dot or bracket notation.
 
 ```javascript
-var color = tulip.color; // red
-var petalCount = tulip.petals; // 32
-var smellsNice = tulip.smells; //true
+let color = tulip.color; // red
+let petalCount = tulip.petals; // 32
+let smellsNice = tulip.smells; //true
 ```
 
 If we wanted to create yet ANOTHER flower, all we have to do is call our function just like we did above.  This time, let's make an object called `lily`.
 
 ```javascript
-var lily = new Flower();
+let lily = new Flower();
 ```
 
 We can access the properties of `lily` in the same manner as we did with `tulip`.
 
 ```javascript
-var color = lily.color; // red
-var petalCount = lily.petals; // 32
-var smellsNice = lily.smells; //true
+let color = lily.color; // red
+let petalCount = lily.petals; // 32
+let smellsNice = lily.smells; //true
 ```
 
 I don't know about you, but I generally like my lilies yellow. I have also never heard of a lily with 32 petals, holy smokes!  Can we change our `lily` object to better reflect my perfect lily? You bet!
@@ -231,8 +235,8 @@ We now have a method inside our flower object called `bloom`.
 There's an issue with the above code. If we create multiple flowers we don't care if the properties `color`, `petal`, and `smells` all have different values. It makes sense for these properties to be different and customizable for each flower. However, all flowers could share the `bloom` method. What we want to avoid is creating an entirely new `bloom` method every time we make a new flower.
 
 ```javascript
-var lily = new Flower();
-var rose = new Flower();
+let lily = new Flower();
+let rose = new Flower();
 
 lily.bloom === rose.bloom // false
 ```
@@ -264,8 +268,8 @@ Flower.prototype = {
 Now try running the same test to see if both flowers share the same `bloom` method.
 
 ```javascript
-var lily = new Flower();
-var rose = new Flower();
+let lily = new Flower();
+let rose = new Flower();
 
 lily.bloom === rose.bloom // true
 ```
@@ -325,7 +329,7 @@ Flower.prototype = {
 Wouldn't it be nice if at the moment we instantiate a flower we could also define its properties?
 
 ```javascript
-var chrysanthemum = new Flower("pink", 65, false);
+let chrysanthemum = new Flower("pink", 65, false);
 ```
 
 Such that the `chrysanthemum` is pink with 65 petals and doesn't smell good.
@@ -406,10 +410,10 @@ function Flower(color, petals, smells) {
 
 // static methods
 Flower.crossPollinate = function(momFlower, dadFlower) {
-  var color = momFlower.color + "-" + dadFlower.color;
-  var petals = (momFlower.petals + dadFlower.petals) / 2;
-  var smells = momFlower.smells && dadFlower.smells;
-  var babyFlower = new Flower(color, petals, smells);
+  let color = momFlower.color + "-" + dadFlower.color;
+  let petals = (momFlower.petals + dadFlower.petals) / 2;
+  let smells = momFlower.smells && dadFlower.smells;
+  let babyFlower = new Flower(color, petals, smells);
   return babyFlower;
 }
 
@@ -433,10 +437,10 @@ Flower.prototype = {
 }
 
 
-var lily = new Flower("blue", 32, true);
-var rose = new Flower("green", 12, true);
+let lily = new Flower("blue", 32, true);
+let rose = new Flower("green", 12, true);
 
-var rily = Flower.crossPollinate(rose, lily);
+let rily = Flower.crossPollinate(rose, lily);
 
 rily.smellsGood();
 ```
